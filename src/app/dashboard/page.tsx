@@ -220,9 +220,17 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex">
-      {/* Sidebar */}
-      <aside className="w-72 bg-primary text-white flex flex-col fixed h-full z-50">
+    <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row">
+      {/* Mobile Topbar */}
+      <div className="md:hidden bg-primary text-white p-4 flex justify-between items-center sticky top-0 z-50">
+        <Link href="/" className="text-xl font-black tracking-tighter">
+          FI<span className="text-secondary">NORA</span>
+        </Link>
+        <button onClick={() => window.location.href = '/'} className="text-xs font-bold text-white/70">Esci</button>
+      </div>
+
+      {/* Sidebar (Desktop) */}
+      <aside className="w-72 bg-primary text-white hidden md:flex flex-col fixed h-full z-50">
         <div className="p-8">
           <Link href="/" className="block w-fit">
             <div className="text-3xl font-black text-white tracking-tighter">
@@ -264,8 +272,8 @@ export default function DashboardPage() {
       </aside>
 
       {/* Main Content */}
-      <main className="ml-72 grow p-12 overflow-y-auto h-screen">
-        <header className="flex justify-between items-center mb-12">
+      <main className="ml-0 md:ml-72 grow p-6 md:p-12 overflow-y-auto h-screen pb-24 md:pb-12">
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-12 gap-4">
           <div>
             <h1 className="text-3xl font-black text-primary mb-2">
               {activeTab === 'dashboard' ? 'Bentornato, Mario' : navItems.find(i => i.id === activeTab)?.label}
@@ -281,6 +289,22 @@ export default function DashboardPage() {
           {renderContent()}
         </AnimatePresence>
       </main>
+
+      {/* Mobile Bottom Nav */}
+      <div className="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-slate-100 flex justify-around p-3 z-50 shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
+        {navItems.slice(0, 4).map((item) => (
+          <button 
+            key={item.id}
+            onClick={() => setActiveTab(item.id)}
+            className={`flex flex-col items-center gap-1 p-2 rounded-xl transition-all ${
+              activeTab === item.id ? 'text-secondary' : 'text-slate-400'
+            }`}
+          >
+            {item.icon}
+            <span className="text-[9px] font-bold truncate max-w-[60px]">{item.label}</span>
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
