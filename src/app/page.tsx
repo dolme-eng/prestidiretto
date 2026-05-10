@@ -145,7 +145,7 @@ export default function Home() {
         className="py-12 bg-slate-50 border-y border-slate-100"
       >
         <div className="container mx-auto px-6">
-          <p className="text-center text-[10px] uppercase tracking-[0.2em] font-black text-slate-400 mb-8">
+          <p className="text-center text-xs md:text-sm uppercase tracking-tighter font-black text-slate-500 mb-8">
             Partner di fiducia e certificazioni istituzionali
           </p>
           <motion.div 
@@ -153,13 +153,13 @@ export default function Home() {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center items-center gap-12 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            className="flex flex-wrap justify-center items-center gap-8 md:gap-16 transition-all duration-500"
           >
              {["OAM CERTIFICATO", "GDPR COMPLIANT", "SSL SECURE", "BANCA D'ITALIA"].map((text, i) => (
                <motion.div 
                 key={i}
                 variants={fadeInUp}
-                className={`text-lg font-black text-slate-600 tracking-tighter italic ${i % 2 === 0 ? 'underline decoration-secondary decoration-4 underline-offset-4' : ''}`}
+                className={`text-xl md:text-2xl font-black text-slate-800 tracking-tighter italic ${i % 2 === 0 ? 'underline decoration-secondary decoration-4 underline-offset-4' : ''}`}
                >
                  {text}
                </motion.div>

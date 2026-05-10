@@ -36,15 +36,15 @@ export default function SimulatorHorizontal() {
           </div>
           <input 
             type="range" 
-            min="3000" 
+            min="5000" 
             max="700000" 
-            step="1000"
+            step="5000"
             value={amount}
             onChange={(e) => setAmount(Number(e.target.value))}
             className="w-full h-1.5 bg-white rounded-lg appearance-none cursor-pointer accent-secondary shadow-sm"
           />
           <div className="flex justify-between mt-3 text-[9px] font-bold text-slate-300 uppercase tracking-tighter">
-            <span>3k€</span>
+            <span>5k€</span>
             <span>700k€</span>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function SimulatorHorizontal() {
             type="range" 
             min="12" 
             max="120" 
-            step="6"
+            step="12"
             value={months}
             onChange={(e) => setMonths(Number(e.target.value))}
             className="w-full h-1.5 bg-white rounded-lg appearance-none cursor-pointer accent-secondary shadow-sm"
