@@ -126,7 +126,7 @@ export default function Home() {
       <Hero />
       
       {/* Simulator Section - Horizontal Floating */}
-      <section id="calcolatore" className="relative z-20 -mt-16 px-6">
+      <section id="calcolatore" className="relative z-20 mt-8 md:-mt-16 px-4 md:px-6">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -179,10 +179,10 @@ export default function Home() {
             className="grid lg:grid-cols-2 gap-16 items-center mb-20"
           >
             <motion.div variants={fadeInUp}>
-              <h2 className="text-4xl md:text-5xl font-black text-primary mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-4 md:mb-6 leading-tight">
                 Perché scegliere <span className="text-gradient">Finora</span>
               </h2>
-              <p className="text-lg text-slate-600 mb-8">
+              <p className="text-base md:text-lg text-slate-600 mb-8">
                 La trasparenza e la velocità al servizio del tuo successo finanziario. 
                 Siamo l&apos;intermediario digitale numero uno per affidabilité e sicurezza dei processi.
               </p>
@@ -260,7 +260,7 @@ export default function Home() {
               <motion.div 
                 key={i} 
                 variants={fadeInUp}
-                className="p-10 rounded-3xl border border-slate-100 bg-white hover:shadow-2xl hover:border-secondary/20 transition-all group"
+                className="p-8 md:p-10 rounded-3xl border border-slate-100 bg-white hover:shadow-2xl hover:border-secondary/20 transition-all group"
               >
                 <div className="mb-6 p-5 rounded-2xl bg-slate-50 w-fit group-hover:bg-secondary/10 group-hover:text-secondary transition-all">
                   {feature.icon}
@@ -366,7 +366,7 @@ export default function Home() {
           
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Tab Navigation */}
-            <div className="w-full lg:w-1/3 flex flex-col space-y-3">
+            <div className="w-full lg:w-1/3 flex flex-row overflow-x-auto pb-4 lg:pb-0 lg:flex-col gap-3 lg:space-y-3 snap-x scrollbar-hide">
               {[
                 { title: "Prestito Personale", icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> },
                 { title: "Prestito Auto", icon: <Car size={20} /> },
@@ -377,7 +377,7 @@ export default function Home() {
                 <button 
                   key={i}
                   onClick={() => setActiveTab(i)}
-                  className={`flex items-center gap-4 px-6 py-5 rounded-2xl font-bold transition-all text-left ${activeTab === i ? 'bg-primary text-white shadow-xl shadow-primary/20 scale-[1.02] z-10' : 'bg-slate-50 text-slate-600 hover:bg-slate-100 hover:scale-[1.01]'}`}
+                  className={`flex items-center gap-3 md:gap-4 px-5 md:px-6 py-4 md:py-5 rounded-2xl font-bold transition-all text-left whitespace-nowrap lg:whitespace-normal shrink-0 snap-start ${activeTab === i ? 'bg-primary text-white shadow-xl shadow-primary/20 scale-[1.02] z-10' : 'bg-slate-50 text-slate-600 hover:bg-slate-100 hover:scale-[1.01]'}`}
                 >
                   <div className={`${activeTab === i ? 'text-secondary' : 'text-slate-400'}`}>{tab.icon}</div>
                   <span className="text-sm md:text-base">{tab.title}</span>

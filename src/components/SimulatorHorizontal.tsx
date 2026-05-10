@@ -90,16 +90,16 @@ export default function SimulatorHorizontal() {
         </div>
 
         {/* Results & CTA */}
-        <div className="lg:w-[28%] w-full bg-primary p-2 rounded-[36px] flex items-center justify-between pl-8 group overflow-hidden relative">
+        <div className="lg:w-[28%] w-full bg-primary p-4 lg:p-2 lg:pl-8 rounded-[36px] flex flex-col sm:flex-row items-center justify-between gap-4 lg:gap-0 group overflow-hidden relative">
           <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-700"></div>
-          <div className="relative z-10">
+          <div className="relative z-10 w-full sm:w-auto text-center sm:text-left">
             <span className="text-[9px] font-black uppercase text-white/40 tracking-[0.2em]">Rata Mensile</span>
             <div className="text-3xl md:text-4xl font-black text-white leading-none mt-1">
               {monthly.toLocaleString('it-IT', { maximumFractionDigits: 0 })}<span className="text-secondary text-sm ml-1">€</span>
             </div>
             <div className="text-[9px] font-bold text-white/30 uppercase mt-2">TAEG {(taeg*100).toFixed(2)}% • TAN {(tan*100).toFixed(2)}%</div>
           </div>
-          <button className="bg-secondary text-white px-8 py-6 rounded-[28px] font-black uppercase text-xs tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-secondary/20 relative z-10">
+          <button className="w-full sm:w-auto bg-secondary text-white px-6 py-4 lg:px-8 lg:py-6 rounded-3xl font-black uppercase text-xs tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-secondary/20 relative z-10">
             Avanti
           </button>
         </div>

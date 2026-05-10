@@ -82,8 +82,8 @@ export default function LoanForm() {
       </div>
 
       {/* Form Card */}
-      <div className="bg-white rounded-[32px] shadow-2xl border border-slate-100 overflow-hidden">
-        <div className="p-8 md:p-12">
+      <div className="bg-white rounded-[32px] shadow-2xl border border-slate-100 overflow-hidden mx-4 md:mx-0">
+        <div className="p-6 md:p-12">
           <AnimatePresence mode="wait">
             {currentStep === 1 && (
               <motion.div

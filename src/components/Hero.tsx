@@ -55,12 +55,12 @@ export default function Hero() {
               <div className="h-px w-8 bg-secondary/50 hidden md:block"></div>
             </motion.div>
 
-            <motion.h1 variants={fadeInUp} className="text-6xl md:text-8xl lg:text-[90px] font-black text-primary leading-none mb-8 tracking-tighter drop-shadow-sm">
+            <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-[90px] font-black text-primary leading-none mb-6 md:mb-8 tracking-tighter drop-shadow-sm">
               Il tuo partner <br/>
               <span className="text-gradient">finanziario.</span>
             </motion.h1>
             
-            <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-slate-700 font-medium mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
+            <motion.p variants={fadeInUp} className="text-lg md:text-2xl text-slate-700 font-medium mb-10 md:mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-sm px-4 md:px-0">
               Soluzioni di credito flessibili e trasparenti per realizzare i tuoi progetti più importanti. Tassi fissi dal 1.99%.
             </motion.p>
             
