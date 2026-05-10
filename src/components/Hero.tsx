@@ -40,16 +40,16 @@ export default function Hero() {
             className="flex flex-col items-center"
           >
             {/* Clean Eyebrow Text (No Background) */}
-            <motion.div variants={fadeInUp} className="relative inline-flex items-center gap-4 mb-10 group">
-              <div className="flex items-center gap-2">
+            <motion.div variants={fadeInUp} className="relative flex md:inline-flex items-center justify-center gap-4 mb-10 group text-center w-full md:w-auto">
+              <div className="hidden md:flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
                 </span>
                 <div className="h-px w-8 bg-secondary/50"></div>
               </div>
-              <span className="text-xs md:text-sm font-black text-white uppercase tracking-[0.25em] drop-shadow-md">
-                Finanziamenti Corporate & Privati <span className="mx-3 text-secondary/50">|</span> Fino a 700k€
+              <span className="text-[10px] sm:text-xs md:text-sm font-black text-white uppercase tracking-[0.25em] drop-shadow-md px-4 md:px-0">
+                Finanziamenti Corporate & Privati <span className="mx-2 sm:mx-3 text-secondary/50">|</span> Fino a 700k€
               </span>
               <div className="h-px w-8 bg-secondary/50 hidden md:block"></div>
             </motion.div>
