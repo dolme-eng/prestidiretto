@@ -28,8 +28,8 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/90 backdrop-blur-xl shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]' : 'bg-transparent'}`}>
       
       {/* Top Bar - Hidden on scroll and mobile */}
-      <div className={`hidden md:block transition-all duration-300 overflow-hidden border-b border-slate-200/50 ${scrolled ? 'h-0 opacity-0 border-transparent' : 'h-10 opacity-100'}`}>
-        <div className="container mx-auto px-6 h-full flex items-center justify-between text-[11px] font-bold text-slate-500 tracking-wider uppercase">
+      <div className={`hidden md:block transition-all duration-300 overflow-hidden border-b ${scrolled ? 'h-0 opacity-0 border-transparent' : 'h-10 opacity-100 border-white/10'}`}>
+        <div className={`container mx-auto px-6 h-full flex items-center justify-between text-[11px] font-bold tracking-wider uppercase ${scrolled ? 'text-slate-500' : 'text-white/80'}`}>
           <div className="flex items-center space-x-6">
             <a href="tel:+39800123456" className="flex items-center gap-2 hover:text-secondary transition-colors">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -41,7 +41,7 @@ export default function Navbar() {
             </a>
           </div>
           <div className="flex items-center space-x-4">
-            <span className="flex items-center gap-1 cursor-pointer hover:text-primary transition-colors">
+            <span className={`flex items-center gap-1 cursor-pointer transition-colors ${scrolled ? 'hover:text-primary' : 'text-white/80 hover:text-white'}`}>
               IT <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </div>
@@ -51,7 +51,7 @@ export default function Navbar() {
       {/* Main Navbar */}
       <div className={`container mx-auto px-6 flex items-center justify-between transition-all duration-500 ${scrolled ? 'py-3' : 'py-5'}`}>
         <Link href="/" className="relative hover:scale-105 transition-transform flex items-center gap-2">
-          <div className="text-2xl font-black text-primary tracking-tighter">
+          <div className={`text-2xl font-black tracking-tighter ${scrolled ? 'text-primary' : 'text-white'}`}>
             FI<span className="text-secondary">NORA</span>
           </div>
         </Link>
@@ -64,7 +64,7 @@ export default function Navbar() {
               <Link 
                 key={link.name} 
                 href={link.href} 
-                className={`text-[13px] font-bold tracking-tight transition-all duration-300 relative group ${link.highlight || isActive ? 'text-secondary' : 'text-primary hover:text-secondary'}`}
+                className={`text-[13px] font-bold tracking-tight transition-all duration-300 relative group ${link.highlight || isActive ? 'text-secondary' : (scrolled ? 'text-primary hover:text-secondary' : 'text-white hover:text-secondary')}`}
               >
                 {link.name}
                 {!link.highlight && (
@@ -82,7 +82,7 @@ export default function Navbar() {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-primary focus:outline-none bg-slate-50 rounded-lg" 
+            className={`md:hidden p-2 focus:outline-none rounded-lg ${scrolled ? 'text-primary bg-slate-50' : 'text-white bg-white/10'}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
           >

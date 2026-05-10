@@ -6,14 +6,19 @@ export default function Contatti() {
     <main className="min-h-screen bg-slate-50">
       <Navbar />
       
-      <section className="pt-40 pb-24">
-        <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h1 className="text-4xl md:text-6xl font-black text-primary mb-6">Contattaci</h1>
-            <p className="text-xl text-slate-500">
+      <section className="pt-40 pb-24 bg-primary relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-8">
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-6">Contattaci</h1>
+            <p className="text-xl text-slate-300">
               Hai una domanda? Il nostro team di esperti è a tua disposizione 24 ore su 24, 7 giorni su 7.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="container mx-auto px-6">
 
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white p-8 rounded-[32px] text-center shadow-sm border border-slate-100">

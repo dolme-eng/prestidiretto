@@ -26,9 +26,9 @@ export default function Hero() {
           className="object-cover"
           priority
         />
-        {/* Heavy white overlay without blur to keep the underlying image sharp */}
-        <div className="absolute inset-0 bg-white/70"></div>
-        <div className="absolute inset-0 bg-linear-to-b from-white via-white/80 to-transparent"></div>
+        {/* Dark overlay to make white text pop while keeping image visible and sharp */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/20 to-black/60"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -48,26 +48,26 @@ export default function Hero() {
                 </span>
                 <div className="h-px w-8 bg-secondary/50"></div>
               </div>
-              <span className="text-xs md:text-sm font-black text-primary uppercase tracking-[0.25em] drop-shadow-sm">
+              <span className="text-xs md:text-sm font-black text-white uppercase tracking-[0.25em] drop-shadow-md">
                 Finanziamenti Corporate & Privati <span className="mx-3 text-secondary/50">|</span> Fino a 700k€
               </span>
               <div className="h-px w-8 bg-secondary/50 hidden md:block"></div>
             </motion.div>
 
-            <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-[90px] font-black text-primary leading-none mb-6 md:mb-8 tracking-tighter drop-shadow-sm">
+            <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-[90px] font-black text-white leading-none mb-6 md:mb-8 tracking-tighter drop-shadow-xl">
               Il tuo partner <br/>
-              <span className="text-gradient">finanziario.</span>
+              <span className="text-secondary">finanziario.</span>
             </motion.h1>
             
-            <motion.p variants={fadeInUp} className="text-lg md:text-2xl text-slate-700 font-medium mb-10 md:mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-sm px-4 md:px-0">
+            <motion.p variants={fadeInUp} className="text-lg md:text-2xl text-slate-200 font-medium mb-10 md:mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-md px-4 md:px-0">
               Soluzioni di credito flessibili e trasparenti per realizzare i tuoi progetti più importanti. Tassi fissi dal 1.99%.
             </motion.p>
             
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-6 w-full max-w-md mx-auto sm:max-w-none">
-               <Link href="#calcolatore" className="btn-primary px-12 py-5 text-sm uppercase tracking-widest font-black rounded-3xl shadow-xl shadow-primary/10 hover:-translate-y-1 transition-transform w-full sm:w-auto text-center">
+               <Link href="#calcolatore" className="btn-primary px-12 py-5 text-sm uppercase tracking-widest font-black rounded-3xl shadow-xl hover:-translate-y-1 transition-transform w-full sm:w-auto text-center">
                  Calcola Rata
                </Link>
-               <Link href="#richiedi" className="bg-white/90 backdrop-blur-md text-primary border-2 border-primary px-12 py-5 text-sm uppercase tracking-widest font-black rounded-3xl hover:bg-slate-50 transition-colors shadow-lg shadow-black/5 w-full sm:w-auto text-center">
+               <Link href="#richiedi" className="bg-transparent text-white border-2 border-white px-12 py-5 text-sm uppercase tracking-widest font-black rounded-3xl hover:bg-white hover:text-primary transition-all shadow-lg w-full sm:w-auto text-center">
                  Richiedi Ora
                </Link>
             </motion.div>
@@ -75,7 +75,7 @@ export default function Hero() {
             {/* Trust Indicators */}
             <motion.div 
               variants={fadeInUp}
-              className="mt-20 flex flex-wrap justify-center gap-8 md:gap-16 opacity-70"
+              className="mt-12 flex flex-wrap justify-center gap-8 md:gap-16 opacity-70"
             >
                {[
                  { label: "Sicurezza", sub: "Bancaria" },
@@ -84,8 +84,8 @@ export default function Hero() {
                ].map((item, i) => (
                  <div key={i} className="flex flex-col items-center">
                    <div className="w-1.5 h-1.5 rounded-full bg-secondary mb-2"></div>
-                   <span className="text-[11px] font-black uppercase tracking-widest text-primary">{item.label}</span>
-                   <span className="text-[9px] font-bold uppercase tracking-widest text-slate-500">{item.sub}</span>
+                   <span className="text-[11px] font-black uppercase tracking-widest text-white">{item.label}</span>
+                   <span className="text-[9px] font-bold uppercase tracking-widest text-white/60">{item.sub}</span>
                  </div>
                ))}
             </motion.div>
