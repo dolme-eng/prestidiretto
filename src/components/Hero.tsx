@@ -27,7 +27,7 @@ export default function Hero() {
           priority
         />
         {/* Heavy white overlay to make the image barely visible */}
-        <div className="absolute inset-0 bg-white/95 backdrop-blur-[8px]"></div>
+        <div className="absolute inset-0 bg-white/95 backdrop-blur-md"></div>
         <div className="absolute inset-0 bg-linear-to-b from-white via-white/80 to-transparent"></div>
       </div>
 
