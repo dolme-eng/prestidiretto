@@ -26,9 +26,9 @@ export default function Hero() {
           className="object-cover"
           priority
         />
-        {/* Subtle overlay to let the image shine */}
-        <div className="absolute inset-0 bg-white/15 backdrop-blur-[1px]"></div>
-        <div className="absolute inset-0 bg-linear-to-b from-white/40 via-transparent to-transparent"></div>
+        {/* Heavy white overlay to make the image barely visible */}
+        <div className="absolute inset-0 bg-white/95 backdrop-blur-[8px]"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-white via-white/80 to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
