@@ -27,7 +27,7 @@ export default function Hero() {
           priority
         />
         {/* Heavy white overlay without blur to keep the underlying image sharp */}
-        <div className="absolute inset-0 bg-white"></div>
+        <div className="absolute inset-0 bg-white/70"></div>
         <div className="absolute inset-0 bg-linear-to-b from-white via-white/80 to-transparent"></div>
       </div>
 
